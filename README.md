@@ -8,4 +8,6 @@ I don't know what I'm doing; expect the CSS file to be very messy.
 
 ![](/screenshot_en.jpg)
 ![](/screenshot_ja.jpg)
+
+A previous version with Rainmeter & other components resembling Windows Aero
 ![](/screenshot_en_01.png)
