@@ -1,0 +1,408 @@
+
+
+/* user-variables */
+
+
+
+	body { --file-line-width:570px } 
+
+	:root {
+		
+		--default-color: #74b8fc;
+		--default-color-rgba: rgba(116, 184, 252, 0.5);
+
+		/* Windows 7 default: "Segoe UI", "Meiryo" */
+		/* For math: "Latin Modern Sans 8", "Harano Aji Gothic" */
+		/* UD Digi Kyokasho NK-R Regular */
+		--default-font: "Segoe UI", "Meiryo", sans-serif;
+		
+		/* Windows 7 default: "Consolas", "MS Gothic" */
+		--default-monospace-font: "Consolas", "MS Gothic";
+		
+		--default-blur: 10px;
+		
+	}
+	
+/* other variables */
+
+	:root {
+		
+		--x-image: url();
+		--iconSearch: url(https://i.imgur.com/Em5ZkuY.png);
+		
+		--default-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8),
+		0px 10px 10px rgba(0, 0, 0, 0.3);
+		
+	}
+
+/* text */
+
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+  margin-left: 0;
+}
+
+.markdown-source-view.is-live-preview {
+  margin-left: 0;
+}
+
+
+	body {
+			--font-default: var(--default-font);
+			--font-monospace-default: var(--default-monospace-font);
+			
+			--h1-font: var(--default-font);
+			--h1-size: 1.3em;
+			--h1-weight: 500;
+			--h1-color: #0045ac;
+			--h2-font: var(--default-font);
+			--h2-size: 1.2em;
+			--h2-weight: 500;
+			--h3-font: var(--default-font);
+			--h3-size: 1.1em;
+			--h3-weight: 500;
+			--h3-color: #0009;
+			--h4-font: var(--default-font);
+			--h5-font: var(--default-font);
+			--h6-font: var(--default-font);
+	}
+	
+
+
+		.markdown-preview-view h2,
+		.markdown-preview-view h3,.markdown-preview-view h4,
+		.markdown-preview-view h5,.markdown-preview-view h6 {
+			display: inline-flex;
+			align-items: center; /* makes the line in the middle */
+			width: 100%;
+		}
+
+		.markdown-preview-view h2:after,
+		.markdown-preview-view h3:after,.markdown-preview-view h4:after,
+		.markdown-preview-view h5:after,.markdown-preview-view h6:after {
+			content: ''; /* Don't need content here flex-grow will handle it */
+			height: 1px; /* How thick the line is */
+			margin-left: 0.5em; /* distance from header text to after line */
+			flex-grow: 100; /* Filles in rest of line */
+		}
+
+
+		.markdown-preview-view h2:after, .markdown-preview-view h3:after { 
+			background-color: #bbbbbb;
+		}
+
+	strong {
+		color: #0045ac;
+		font-weight: 600;
+	}
+	.cm-s-obsidian span.cm-strong {
+		color: #0045ac;
+	}
+	
+	.cm-underline {
+		color: #1e8cfa;
+	}
+
+	code {
+		font-family: var(--default-monospace-font);
+	}
+
+	.MJX-TEX {
+		font-family: "Latin Modern";
+	} 
+	
+/* tags */
+
+a.tag {
+	color: #000;
+	font-family: var(--default-monospace-font);
+	background-color: #74b8fc10;
+	border-radius: 0;
+	border: 1px solid #0004;
+	box-shadow: 0px 1px 3px #74b8fcaa;	
+}
+
+a.tag:hover {
+	color: #000;
+	background-color: #ffff;
+	border-radius: 0;
+	border: 1px solid #0004;
+	box-shadow: 0px 1px 2px #0001;	
+}
+
+/* bullet lists */
+ 
+.list-bullet{ 
+	list-style: none;
+	list-style-type: none;
+}
+
+.is-collapsed {
+	text-shadow: 0 1px 2px #0006;
+}
+ 
+li.is-collapsed .list-bullet:after, .is-collapsed ~ .cm-formatting-list .list-bullet:after {
+	background-color: #000a; 
+	box-shadow: 0 0 0 0;
+}
+
+body {
+	--collapse-icon-color-collapsed: #000a
+}
+
+/* tooltip */
+
+.tooltip {
+	
+	color: #000000;
+	background-color: transparent;
+	background: linear-gradient(to bottom,#f2f2f2 45%, #ebebeb 45%, #cfcfcf)
+	
+}
+
+/* header title */
+
+.view-header {
+    border-bottom: 2px solid #ddd; /* Only show the bottom border */
+    position: relative; /* Needed for pseudo-elements */
+}
+
+
+/* sidebar backgrounds */
+
+.workspace-tabs {
+  background-size: cover;
+}
+
+.workspace-tabs .workspace-leaf {
+	background: linear-gradient(50deg,
+		#e7f1fdd0 0%,
+		#fffd 70%,
+		#dbe5f3d0 100%
+	);
+}
+
+/* tab header */
+
+.markdown-rendered {
+	backdrop-filter: brightness(100%) blur(0px);
+	background: #fff;
+}
+
+.view-content {
+	backdrop-filter: brightness(100%) blur(0px);
+	background: #fff;
+}
+
+.workspace-tab-header-container {
+    background: linear-gradient(to bottom, 
+        rgba(255, 255, 255, 1) 0%,
+				#e4e9f4 42%, 
+        #d8deef 50% 
+    );
+    border: 1px solid;
+		border-color: #b5bbcb;
+		box-shadow: inset 0px 0px 5px #fff;
+}
+
+/* tabs */
+
+.workspace-split.mod-root .workspace-tab-header.is-active::before, .workspace-split.mod-root .workspace-tab-header.is-active::after {
+	width: 0px;
+	height: 0px;
+}
+
+.workspace .mod-root .workspace-tab-header {
+	background: linear-gradient(to bottom,
+		#f1f1f1 0%,
+		#f1f1f1 50%,
+		#ddd 60%,
+		#cecece 100%
+	);
+	border: 2px solid rgba(150, 180, 210, 0.5);
+	border-radius: 0px;
+	box-shadow: inset 0px 0px 5px #f4f4f4;
+}
+
+.is-focused .workspace-tab-header.is-active {
+	background: #fff;
+	border-bottom: 0px;
+	box-shadow: 0 0 0;
+}
+
+/* view header */
+
+.view-header-title-container {
+	justify-content: start;
+	}
+
+/* hover, selected */
+
+	/* hover (files) */
+	body:not(.is-grabbing) .tree-item-self.is-clickable:hover {
+		color: var(--nav-item-color-hover);
+		background: linear-gradient(to bottom, 
+			#ffffff 0%,   /* White at the top */
+			#d6e9ff 100%   /* Light blue at the bottom */
+		);
+		font-weight: var(--nav-item-weight-hover);
+		
+		/* Border effect */
+		outline: 1px solid rgba(0, 120, 215, 0.4); /* Softer outer glow */
+	}
+
+	/* selected */
+	body:not(.is-grabbing) .nav-file-title.is-active:hover, body:not(.is-grabbing) .nav-folder-title.is-active:hover, .nav-file-title.is-active, .nav-folder-title.is-active {
+		color: var(--nav-item-color-hover);
+		background: linear-gradient(to bottom, 
+			#ffffff 0%,   /* White at the top */
+			#d6e9ff 90%   /* Light blue at the bottom */
+		);
+		font-weight: var(--nav-item-weight-hover);
+		
+		/* Border effect */
+		border: 1px solid #4a90e2;  /* Windows 7-like blue */
+		outline: 1px solid rgba(0, 120, 215, 0.2); /* Softer outer glow */
+	}
+
+	/* hover (note reviews) */
+	body:not(.is-grabbing) .nav-file-title:hover, body:not(.is-grabbing) .nav-folder-title:hover {
+		color: var(--nav-item-color-hover);
+		background: linear-gradient(to bottom, 
+			#ffffff 0%,   /* White at the top */
+			#d6e9ff 90%   /* Light blue at the bottom */
+		);
+		font-weight: var(--nav-item-weight-hover);
+		
+		/* Border effect */
+		outline: 1px solid rgba(0, 120, 215, 0.1); /* Softer outer glow */
+	}
+	
+	body {
+		--background-modifier-hover: rgba(100, 100, 100, 0.075);
+	}
+
+
+/* prompt */
+
+.prompt {
+	box-shadow: var(--default-shadow)
+}
+
+/* modal container */
+
+	.modal-container.mod-dim .modal {
+		box-shadow: 0 2pt 15pt #000a
+	}
+
+	.modal.mod-sidebar-layout .modal-content::before {
+		/* 
+		content: "";
+    width: 100%;
+    height: 42px;
+    background-image: var(--tab-gradient);
+    border-bottom: 2px solid var(--large-border-color);
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+		*/
+		
+	}
+	
+.modal {
+	background: linear-gradient(
+		45deg,
+		#f0f0f0 0%,
+		#ffffff 20%
+		);
+  border: 1px solid transparent;
+  position: relative;
+  z-index: 1000;
+}
+
+.modal-bg {
+  width: 100%;
+  background-color: transparent;
+}
+
+
+.modal-container.mod-dim .modal.closed {
+  animation: modalClose 0.3s ease-in forwards; /* Animation for closing */
+}
+
+	/* close */
+	
+		.modal-close-button {
+			height: 24px;
+			position: absolute;
+		}
+
+		.modal-close-button:before {
+		}
+
+.vertical-tab-content {
+	background: transparent;
+}
+
+.vertical-tab-header {
+	background: linear-gradient(to bottom, 
+			#ffffff 0%,   /* White at the top */
+			#d6e9ff 90%   /* Light blue at the bottom */
+		);
+}
+
+/* containers */
+
+.workspace-split.mod-left-split, .workspace-split.mod-right-split {
+	background-image: url(https://i.imgur.com/jWEDBaW.png);
+}
+
+/* tables */
+
+.markdown-source-view.mod-cm6 .cm-html-embed, .markdown-source-view.mod-cm6 .cm-callout, .markdown-source-view.mod-cm6 .cm-table-widget {
+	background: transparent;
+}
+
+/* blockquotes */
+
+.el-blockquote {
+	background-image: url(https://i.imgur.com/jWEDBaW.png);
+}
+
+.markdown-rendered blockquote {
+	padding-top: 5px;
+	padding-bottom: 10px;
+	border-color: #fff;
+	border-inline-start: transparent;
+	outline: 1px solid rgba(100, 100, 100, 0.5);
+	background: linear-gradient(to left, 
+		#ffffffcc 0%,
+		#e2e6eb 120%
+	);
+	box-shadow: 0 2pt 3pt #0005;
+}
+
+/* down there */
+	
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+	background: #f0f4fa;
+	box-shadow: inset 0 1pt 2pt #88f5;
+}
+
+.status-bar {
+	color: #000;
+	background-color: #f0ecec;
+	position: relative;
+	justify-content: start;
+	border-radius: 0pt;
+	border-width: 1pt;
+	border-color: #909090;
+	box-shadow: inset 0 1px 0px #fff;
+}
+
+/* notices */
+
+.notice {
+	color: #000000;
+	background-color: transparent;
+	background: linear-gradient(to bottom,#f2f2f2 45%, #ebebeb 45%, #cfcfcf)
+}
