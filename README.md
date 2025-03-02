@@ -8,3 +8,4 @@ I don't know what I'm doing; expect the CSS file to be very messy.
 
 ![](/screenshot_en.jpg)
 ![](/screenshot_ja.jpg)
+![](/screenshot_en_01.png)
